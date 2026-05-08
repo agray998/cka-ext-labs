@@ -146,3 +146,6 @@ Percentage of the requests served within a certain time (ms)
 
 ## Review
 **Congratulations!** You have successfully deployed and profiled the performance of a webserver, and configured autoscaling to improve said deployment's P90 response time
+
+## Stretch Task
+Find (or build for yourself) a container image that has apache2-utils installed. Create a Kubernetes _CronJob_ which uses this image to perform performance benchmarking of the deployment on a regular schedule
