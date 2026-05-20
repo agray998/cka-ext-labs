@@ -84,9 +84,7 @@ kubectl -n webserver apply -f netpol-webserver.yml
 6. [6]Use helm to deploy the Nginx ingress controller into the ingress namespace:
 
 ```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo update
-helm install ingress-nginx ingress-nginx/ingress-nginx --set controller.kind=DaemonSet
+helm -n ingress install nginx-ingress oci://ghcr.io/nginx/charts/nginx-ingress --version 2.5.2 --set controller.kind=DaemonSet
 ```
 
 ### Deploy the Webserver
